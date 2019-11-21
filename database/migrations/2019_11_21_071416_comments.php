@@ -19,7 +19,7 @@ class Comments extends Migration
             $table->string('content')->nullable();
             $table->string('snippet')->nullable();
             $table->timestamp('commented_at');
-	    $table->bigInteger('post_id');
+    	    $table->bigInteger('post_id');
         });
     }
 
