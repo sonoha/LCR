@@ -19,12 +19,14 @@ class CommentsTableSeeder extends Seeder
                 'content'   => 'OMG!!',
                 'snippet'   => null,
                 'post_id'   => 4,
+                'commented_at' => '2019-07-02 17:50:33',
             ],
             [
                 'user_id'   => 2,
                 'content'   => 'オプション忘れないで！',
                 'snippet'   => '--no-preserve-root',
                 'post_id'   => 4,
+                'commented_at' => '2019-10-02 17:50:33',
             ],
         ]);
     }
