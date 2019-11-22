@@ -14,14 +14,16 @@ class PostController extends Controller
         $data = $request->all();
         // 現在認証されているユーザーのID取得
         $id = Auth::id();
-
+        if($id != null){
         $data['user_id'] = $id;
-        
-        
+       
+       
         $post = Post::create($data);
 
         return back();
-    
+        }else{
+            return redirect()->route('home');;
+        }
     }
 
     public function InsertCommentsDB(Request $request,$post_id) {
