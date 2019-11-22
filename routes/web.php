@@ -15,6 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+#--------中村作成分-------------
+Route::get('/post', function () {
+    return view('post');
+});
+
+Route::post('/post/tl','PostController@InsertPostsDB');
+Route::post('/post/detail/{post_id}','PostController@InsertCommentsDB');
+#--------ここまで---------------
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
