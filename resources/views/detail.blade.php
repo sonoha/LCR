@@ -7,7 +7,7 @@
                 <span class="text-muted">#{{ $posts->user_id }}</span>
             </div>
             <div>
-                <span>{{ $posts->content }}</span>
+                <span>{!! nl2br(e($posts->content)) !!}</span>
             </div>
             @isset($posts->snippet)
                 <pre class="m-2 border border-info rounded"><code>{{ $posts->snippet }}</code></pre>
@@ -25,7 +25,7 @@
                     <span class="text-muted">#{{ $comments->user_id }}</span>
                 </div>
                 <div>
-                    <span>{{ $comments->content }}</span>
+                    <span>{!! nl2br(e($comments->content)) !!}</span>
                 </div>
                 @isset($comments->snippet)
                     <pre class="m-2 border border-info rounded"><code>{{ $comments->snippet }}</code></pre>
