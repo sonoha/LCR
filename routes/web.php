@@ -25,8 +25,11 @@ Route::post('/post/detail/{post_id}','PostController@InsertCommentsDB');
 
 Route::get('/','TlController@tl');
 
+Route::get('/home', function () {
+    return redirect('/');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+#Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/detail/{post_id}','DetailController@show');
