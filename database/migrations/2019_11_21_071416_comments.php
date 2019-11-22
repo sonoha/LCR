@@ -16,8 +16,8 @@ class Comments extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->bigIncrements('comment_id')->unique();
             $table->bigInteger('user_id');
-            $table->string('content')->nullable();
-            $table->string('snippet')->nullable();
+            $table->string('content',2500)->nullable();
+            $table->string('snippet',2500)->nullable();
             $table->timestamp('commented_at');
     	    $table->bigInteger('post_id');
         });

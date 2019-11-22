@@ -17,8 +17,8 @@ class Posts extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('post_id')->unique();
             $table->bigInteger('user_id');
-            $table->string('content')->nullable();
-            $table->string('snippet')->nullable();
+            $table->string('content',2500)->nullable();
+            $table->string('snippet',2500)->nullable();
             $table->timestamp('posted_at');
         });
     }
