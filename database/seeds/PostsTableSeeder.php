@@ -38,6 +38,26 @@ class PostsTableSeeder extends Seeder
                 'snippet'   => '$ sudo rm -rf /',
                 'posted_at' => '2019-10-02 17:50:33',
             ],
+            [
+                'user_id'   => 3,
+                'content'   => 'laravelについて教えてください。
+                                bladeテンプレートで他のbladeテンプレートをincludeした時に変数が渡せません。
+                                controllerから取得した変数を文字列と結合して別のbladeテンプレートに渡したいのですが、どなたか教えてください。',
+                'snippet'   => '@include(\'post\', [\'action\' => \'detail/{{$posts->post_id}}\'])',
+                'posted_at' => '2019-09-02 17:50:33',
+            ],
+            [
+                'user_id'   => 3,
+                'content'   => 'Javaについて教えてください。
+                                +-?をString型のString cに代入して、if(c=="+")のように条件分岐させているのですが、うまくい来ません。',
+                'snippet'   => 'if(c == "?") break;
+                                if(c == "+"){
+                                  hogehoge;
+                                }else if(c == "-"){
+                                  hogehoge;
+                                }',
+                'posted_at' => '2019-09-02 17:50:33',
+            ],
         ]);
     }
 }
