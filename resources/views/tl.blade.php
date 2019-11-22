@@ -1,20 +1,22 @@
 
 @foreach($posts as $posts)
-<div>
+<a href="http://localhost/detail/{{$posts->id}}">
     <div>
-        <p>{{ $posts->name }}</p>
+        <div>
+            <p>{{ $posts->name }}</p>
+        </div>
+        <div>
+            <p>{{ $posts->id }}</p>
+        </div>
+        <div>
+            <p>{{ $posts->content }}</p>
+        </div>
+        <div>
+            <p>{{ $posts->snippet }}</p>
+        </div>
+        <div>
+            <p>{{ $posts->posted_at }}</p>
+        </div>
     </div>
-    <div>
-        <p>{{ $posts->id }}</p>
-    </div>
-    <div>
-        <p>{{ $posts->content }}</p>
-    </div>
-    <div>
-        <p>{{ $posts->snippet }}</p>
-    </div>
-    <div>
-        <p>{{ $posts->posted_at }}</p>
-    </div>
-</div>
+</a>
 @endforeach
