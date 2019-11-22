@@ -11,10 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
+Route::get('/','TlController@tl');
+Route::get('/home', function () {
+    return redirect('/');
+});
+Route::get('/post', function () {
+    return view('post');
+});
+Route::get('/detail/{post_id}','DetailController@show');
+Route::post('/post/tl','PostController@InsertPostsDB');
+Route::post('/post/detail/{post_id}','PostController@InsertCommentsDB');
 
-Route::get('/home', 'HomeController@index')->name('home');
+//不正なURLへのリクエストはトップへリダイレクト
+Route::fallback(function () {
+    return redirect('/');
+});
