@@ -14,7 +14,7 @@ class TlController extends Controller
         $posts = \DB::table('posts')
         ->limit(3000)
         ->join('users','posts.user_id','=','id')
-        ->orderBy('post_id','desc')
+        ->orderBy('posted_at','desc')
         ->get();
 
         foreach($posts as $post){
