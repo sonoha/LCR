@@ -1,18 +1,6 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>POST</title>
-    </head>
-    <body>
-        <form action="/post/{{$action}}" method="post">
-            {{csrf_field()}}
-            <input type="text" name="content" value="本文">
-            <input type="text" name="snippet" value="コード">
-            <input type="submit" value="投稿">
-        </form>
-        
-    </body>
-</html>
+<form action="/post/{{$action}}" method="post" class="col-12 my-2 py-2 bg-info shadow-sm rounded">
+    {{csrf_field()}}
+    <input type="text" name="content" placeholder="本文" required class="col-12 my-2">
+    <input type="text" name="snippet" placeholder="コード" class="col-12 my-2 bg-light">
+    <input type="submit" value="投稿" class="col-12 my-2 text-white bg-primary shadow-sm btn">
+</form>
