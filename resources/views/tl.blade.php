@@ -19,12 +19,14 @@
                 <pre class="m-2 border border-info rounded"><code>{{ $posts->snippet }}</code></pre>
                 @endisset
                 <div class="text-info text-right">
-                    <span>
-                        {{ $posts->count }}
-                    </span>
-                    <span>
-                        返信
-                    </span>
+                @if ($posts->count != 0)
+                <span>
+                    {{ $posts->count }}
+                </span>
+                <span>
+                    返信
+                </span>
+                @endif
                 </div>
                 <div class="text-right">
                     <span>{{ $posts->posted_at }}</span>
