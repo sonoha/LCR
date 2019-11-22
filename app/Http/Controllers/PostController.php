@@ -14,6 +14,7 @@ class PostController extends Controller
         $data = $request->all();
         // 現在認証されているユーザーのID取得
         $id = Auth::id();
+
         $data['user_id'] = $id;
         
         
@@ -28,14 +29,17 @@ class PostController extends Controller
         $data = $request->all();
         // 現在認証されているユーザーのID取得
         $id = Auth::id();
+        if($id != null){
         $data['user_id'] = $id;
         $data['post_id'] = $post_id;
         
         
         $comment = Comment::create($data);
-
+    
         return back();
-
+        }else{
+            return redirect()->route('home');;
+        }
 
     
     }
