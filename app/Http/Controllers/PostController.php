@@ -22,7 +22,7 @@ class PostController extends Controller
 
         return back();
         }else{
-            return redirect()->route('home');;
+            return redirect()->route('login');;
         }
     }
 
