@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-@include('post', ['action' => 'tl'])
     <div class="container">
+        @include('post', ['action' => 'tl'])
         @foreach($posts as $posts)
         <a href="http://localhost/detail/{{$posts->post_id}}" class="text-decoration-none text-secondary">
             <div class="col-12 my-2 py-2 bg-white shadow-sm rounded">
