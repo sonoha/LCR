@@ -17,6 +17,11 @@ class TlController extends Controller
         ->orderBy('post_id','desc')
         ->get();
 
+        foreach($posts as $post){
+            $count = Comment::where('post_id','=',$post->post_id)->count();
+            $post->count = $count; // add property
+        }
+
         return view('tl')->with(compact('posts'));
     }
 }
