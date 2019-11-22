@@ -12,7 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-autosize@1.18.18/jquery.autosize.min.js" defer></script>
     <script>
         $(function(){
             $('textarea').autosize();
@@ -63,9 +63,9 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <span class="nav-link bg-info rounded-pill" style="max-width: 200px;">
+                                <div class="p-2 bg-info rounded-pill" style="max-width: 300px;">
                                     <span class="text-white">you are: {{ Auth::user()->name }}</span>                                  
-                                </span>
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
