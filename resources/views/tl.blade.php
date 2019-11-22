@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         @foreach($posts as $posts)
-        <a href="http://localhost/detail/{{$posts->id}}" class="text-decoration-none text-secondary">
+        <a href="http://localhost/detail/{{$posts->post_id}}" class="text-decoration-none text-secondary">
             <div class="col-12 my-2 py-2 bg-white shadow-sm rounded">
                 <div class="col-5 mb-1 bg-info rounded-pill" style="max-width: 200px;">
                     <span class="text-white">{{ $posts->name }}</span>
