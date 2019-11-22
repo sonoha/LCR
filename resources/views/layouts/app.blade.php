@@ -63,6 +63,11 @@
                             @endif
                         @else
                             <li class="nav-item">
+                                <span class="nav-link bg-info rounded-pill" style="max-width: 200px;">
+                                    <span class="text-white">you are: {{ Auth::user()->name }}</span>                                  
+                                </span>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
