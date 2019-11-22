@@ -29,3 +29,5 @@ Route::post('/post/detail/{post_id}','PostController@InsertCommentsDB');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/detail/{post_id}','DetailController@show');
+Route::get('/timeline', 'TlController@tl');
