@@ -35,5 +35,11 @@
               </div>
             </div>
           @endforeach
+
+          @php
+            $action = 'detail/'.$posts->post_id;
+          @endphp
+
+          @include('post', ['action' => $action])
     </body>
 </html>
