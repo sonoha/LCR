@@ -1,6 +1,7 @@
 @extends('layouts.app')
-
 @section('content')
+
+@include('post', ['action' => 'tl'])
     <div class="container">
         @foreach($posts as $posts)
         <a href="http://localhost/detail/{{$posts->post_id}}" class="text-decoration-none text-secondary">
