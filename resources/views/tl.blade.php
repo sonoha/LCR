@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<form>
-<input type="button" value="更新" onClick="window.location.reload();">
-</form>
+<a class="position-fixed" onClick="window.location.reload();" style="bottom:50px;right:50px;z-index:2;">
+    <img src="{{ asset('/img/reload.png') }}" class="rounded-circle bg-white">
+</a>
     <div class="container">
         @include('post', ['action' => 'tl'])
         @foreach($posts as $posts)
@@ -18,7 +18,7 @@
                 @isset($posts->snippet)
                 <pre class="m-2 border border-info rounded"><code>{{ $posts->snippet }}</code></pre>
                 @endisset
-                <div>
+                <div class="text-info text-right">
                     <span>
                         {{ $posts->count }}
                     </span>
