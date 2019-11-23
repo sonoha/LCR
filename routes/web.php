@@ -23,6 +23,9 @@ Route::get('/detail/{post_id}','DetailController@show');
 Route::post('/post/tl','PostController@InsertPostsDB');
 Route::post('/post/detail/{post_id}','PostController@InsertCommentsDB');
 
+//Ajax
+Route::match(['get', 'post'], '/ajax/tl/{posted_at}', 'TlController@tlAjax');
+
 //不正なURLへのリクエストはトップへリダイレクト
 Route::fallback(function () {
     return redirect('/');
